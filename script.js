@@ -11,6 +11,9 @@ feet.addEventListener('input',function(){
 inch.addEventListener('input',function(){
     let i = this.value;
     let f = i/12;
+    if(!Number.isInteger(f)){
+        f = f.toFixed(2);
+    };
     feet.value = f;
 })
 
